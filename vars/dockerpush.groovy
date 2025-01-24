@@ -4,7 +4,7 @@ def call(String tag) {
     passwordVariable: "docker_pass",
     usernameVariable: "docker_user"
     )]) {
-       echo "Logging into dockerhub with the username ${docker-user}"
+       echo "Logging into dockerhub with the username ${docker_user}"
        sh "docker login -u ${docker_user} -p ${docker_pass}"
        echo "Login Successfull in ${docker_user}"
        echo "Pushing the image into ${docker_user} account"
