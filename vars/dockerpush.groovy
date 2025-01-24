@@ -7,11 +7,11 @@ def call(String tag) {
         sh '''
            #!/bin/bash
            echo "Logging into dockerhub with the username ${docker_user}"
-           sh "docker login -u ${docker_user} -p ${docker_pass}"
+           docker login -u ${docker_user} -p ${docker_pass}
            echo "Login Successfull in ${docker_user}"
            echo "Pushing the image into ${docker_user} account"
-           sh "docker push ${docker_user}/notes-app:${tag}"
-           echo "Push Successfull into ${docker_user}"
+           docker push ${docker_user}/notes-app:${tag}
+           Push Successfull into ${docker_user}
         '''
     }
 }
