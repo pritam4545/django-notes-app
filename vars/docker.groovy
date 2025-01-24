@@ -3,6 +3,6 @@ def call() {
      sudo apt update -y
      sudo apt-get install docker.io -y
      sudo systemctl enable docker 
-     sudo usermod -aG docker ${whoami}
+     sudo usermod -aG docker $(whoami)
   '''
 }
